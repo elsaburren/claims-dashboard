@@ -63,7 +63,6 @@ for x in set(allowed_columns.values()):
 
 # Set types
 df = df.astype({'id' : str, 'year' : int, 'claim' : float, 'line':str})
-print(df.dtypes)
 
 # Define a count variable
 df['count'] = 1
