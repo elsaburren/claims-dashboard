@@ -16,4 +16,4 @@ Modules:
 
 Source of data: my imagination.
 
-[Preview](https://raw.githubusercontent.com/elsaburren/claims-dashboard/main/images/claims_dashboard.png)
+<img src='https://raw.githubusercontent.com/elsaburren/claims-dashboard/main/images/claims_dashboard.png' alt='claims dashboard preview'>
