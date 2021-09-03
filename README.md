@@ -16,4 +16,4 @@ Modules:
 
 Source of data: my imagination.
 
-[Preview](./images/claims-dashboard.png)
+[Preview](https://raw.githubusercontent.com/elsaburren/claims-dashboard/main/images/claims_dashboard.png)
