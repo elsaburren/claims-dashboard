@@ -46,7 +46,7 @@ df = pd.read_excel('https://raw.githubusercontent.com/elsaburren/claims-dashboar
 # Remove unnamed
 df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
 
-# Rename column name and check data validity
+# Rename columns and check data validity
 df.rename(lambda x: allowed_columns[strip_blanks_punctuation_umlaute_to_lower(x)] if strip_blanks_punctuation_umlaute_to_lower(x) in list(allowed_columns.keys()) else x, axis='columns', inplace=True)
 for x in set(allowed_columns.values()):
     if list(df.columns).count(x) > 1:
