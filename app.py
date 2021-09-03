@@ -299,6 +299,7 @@ def update_sev_dist(slct_threshold, slct_line, slct_dist):
     # Filter data
     dff = df.loc[df['line'].isin(slct_line), ['claim']]
     dff = dff.loc[df['claim'] >= slct_threshold,:]
+    
     # Fit
     if slct_dist == 'pareto':
         param = pareto.fit(dff['claim'], method='MLE', floc=0.0, fscale=slct_threshold)
@@ -317,6 +318,7 @@ def update_sev_dist(slct_threshold, slct_line, slct_dist):
     # Create graph output
     fig_dist = px.scatter(dff, x='claim', y='sf', color='sf_type', title='Survival Prob Severity >= {:,}'.format(slct_threshold))
     fig_dist.update_layout(legend=dict(title='', orientation='h', yanchor='bottom', y=-0.3), yaxis=dict(title='survival function (1-CDF)'))
+    
     # Create text output and return
     out_dist = 'Fitted {0} parameters are: shape={1:.4f}, scale={2:,.2f}, location={3:,.2f}'.format(format_dist_name[fitted_dist.type()], fitted_dist.shape(), fitted_dist.scale(), fitted_dist.loc())
     
@@ -335,7 +337,7 @@ def update_frq_dist(slct_threshold, slct_line, slct_dist):
     dff = df.loc[df['line'].isin(slct_line), ['year', 'count']]
     dff = dff.loc[df['claim'] >= slct_threshold,:]
     
-    # Compute annual nb
+    # Compute annual number of claims
     dff = pd.concat([dff, format_frq])
     dff = dff.groupby(['year'], as_index=False)[['count']].apply(lambda x: x.sum())
     
