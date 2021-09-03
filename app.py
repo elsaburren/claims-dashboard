@@ -259,7 +259,7 @@ app.layout = html.Div([
 
 # Create and connect Plotly graphs with Dash Components
 
-# Claims Threshold
+# Claims threshold
 @app.callback(
         [Output(component_id='out_claim', component_property='children'),
          Output(component_id='out_claim_types', component_property='children'),         
