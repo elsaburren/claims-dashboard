@@ -1,5 +1,5 @@
 # claims-dashboard
-A Dash/Plotly dashboard for visualizing large insurance claims with the ability to fit severity and frequency distributions.
+A Dash/Plotly dashboard for visualizing large (re)insurance claims with the ability to fit severity and frequency distributions.
 
 #reinsurance #actuary
 
