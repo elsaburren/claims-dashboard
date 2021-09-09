@@ -15,7 +15,7 @@ Modules:
  </ul>
 
 Installation:
-For a local desktop installation, only app.py is really needed. You may download requirements.txt in order to:
+For a local desktop installation, only app.py is really needed from my github. You may download requirements.txt in order to:
 <br>C:\\..\Python37\python.exe -m pip install -r requirements.txt (on Windows and similarly on other operating systems).
 <br>In case "ERROR: Failed building wheel for bottleneck" shows up when installing the modules, you will need to install bottleneck manually (I used version 1.3.2).
 
